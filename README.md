@@ -1,9 +1,10 @@
+<img src="extras/imagenes/php.png">
 
-# Curso de PHP y mySQL 48385
+# Curso de PHP y mySQL 53796
 
 > Curso de PHP y mySQL |    
-> Martes y Jueves 15hs a 18hs |    
-> Código 48385 |    
+> Lunes, Martes y Miércoles 10hs a 13hs |    
+> Código 53796 |    
 > sensei: Marcos Pinardi |    
 
 ## Requisitos
