@@ -10,7 +10,8 @@
     <h1>Condicionales con PHP</h1>
 
 <?php
-    $numero = 50;//hardcoding
+    #$numero = 50;//hardcoding
+    $numero = $_POST['numero'];
     if( $numero < 100 ){
 ?>
         <img src="imagenes/ok.png">
@@ -24,7 +25,7 @@
 ?>
     <hr>
 <?php
-    $numero = 50;//hardcoding
+    //$numero = 50;//hardcoding
     if( $numero < 100 ){
         echo '<img src="imagenes/ok.png">';
     }
@@ -34,15 +35,13 @@
 ?>
     <hr>
 <?php
-    $numero = 50;//hardcoding
+    //$numero = 50;
+    $img = 'error'; //valor predeterminado
     if( $numero < 100 ){
         $img = 'ok';
     }
-    else{
-        $img = 'error';
-    }
 ?>
-    <img src="imagenes/<?php echo $img; ?>.png">
+    <img src="imagenes/<?= $img; ?>.png">
 
 
 </body>
