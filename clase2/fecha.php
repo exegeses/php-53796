@@ -9,6 +9,27 @@
 <body>
     <h1>Trabajo con la fecha en PHP</h1>
 
+<?php
+    #mostrar la fecha   12/08/2021
+    $fecha = date('d/m/Y');
+    echo $fecha;
+?>
+    <hr>
+<?php
+    #Mostrar día de la semana en expañol
+    $diaIngles = date('l');
+    switch ($diaIngles) {
+        case 'Monday': $dia = 'Lunes'; break;
+        case 'Tuesday': $dia = 'Martes'; break;
+        case 'Wednesday': $dia = 'Miércoles'; break;
+        case 'Thursday': $dia = 'Jueves'; break;
+        case 'Friday': $dia = 'Viernes'; break;
+        case 'Saturday': $dia = 'Sabaduki'; break;
+        case 'Sunday': $dia = 'Domingol'; break;
+    }
+
+    echo $dia;
+?>
 
 
 
