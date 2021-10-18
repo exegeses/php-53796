@@ -8,6 +8,7 @@
             'sagrada', 'santorini', 'taj',
             'wall'
         ];
+    $cantidad = count($locaciones);
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,15 +22,19 @@
 <body>
     <main>
 
-
+<?php
+    for( $i = 0; $i < $cantidad; $i++ ){
+?>
         <article>
-            <img src="locaciones/acropolis.jpg">
+            <img src="locaciones/<?= $locaciones[$i] ?>.jpg">
             <h2>Nombre</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto, deserunt exercitationem harum impedit labore mollitia obcaecati provident sit tempore?
             </p>
         </article>
-
+<?php
+    }
+?>
 
     </main>
 </body>
