@@ -41,17 +41,17 @@
     <main>
 
 <?php
-
+    for ( $i=0; $i<$cantidad; $i++ ){
 ?>
         <article>
-            <img src="locaciones/santorini.jpg">
-            <h2>Nombre</h2>
+            <img src="locaciones/<?= $locaciones[$i] ?>.jpg">
+            <h2><?= $locaciones2[$i] ?></h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto, deserunt exercitationem harum impedit labore mollitia obcaecati provident sit tempore?
             </p>
         </article>
 <?php
-
+    }
 ?>
 
     </main>
