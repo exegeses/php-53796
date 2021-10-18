@@ -34,17 +34,17 @@
     <main>
 
 <?php
-
+        foreach ( $locaciones3 as $img=>$nombre ){
 ?>
         <article>
-            <img src="locaciones/petra.jpg">
-            <h2>Nombre</h2>
+            <img src="locaciones/<?= $img ?>.jpg">
+            <h2><?= $nombre ?></h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto, deserunt exercitationem harum impedit labore mollitia obcaecati provident sit tempore?
             </p>
         </article>
 <?php
-
+        }
 ?>
 
     </main>
