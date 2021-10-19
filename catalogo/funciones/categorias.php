@@ -1,0 +1,3 @@
+<?php
+
+    #### CRUD DE categorías
