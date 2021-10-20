@@ -1,5 +1,8 @@
 <?php
     //require 'config/config.php';
+    require 'funciones/conexion.php';
+    require 'funciones/categorias.php';
+    $categorias = listarCategorias();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -26,9 +29,12 @@
                 </tr>
             </thead>
             <tbody>
+<?php
+            while( $categoria = mysqli_fetch_assoc($categorias) ){
+?>            
                 <tr>
-                    <td>1</td>
-                    <td>nombre</td>
+                    <td><?= $categoria['idCategoria'] ?></td>
+                    <td><?= $categoria['catNombre'] ?></td>
                     <td>
                         <a href="" class="btn btn-outline-secondary btn-sm">
                             <i class="bi bi-pencil-square"> </i>
@@ -42,6 +48,9 @@
                         </a>
                     </td>
                 </tr>
+<?php
+            }
+?>            
             </tbody>
         </table>
 
