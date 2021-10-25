@@ -1,5 +1,8 @@
 <?php
     //require 'config/config.php';
+    require 'funciones/conexion.php';
+    require 'funciones/usuarios.php';
+    $usuarios = listarUsuarios();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -28,11 +31,14 @@
                 </tr>
             </thead>
             <tbody>
+<?php
+        while ( $usuario = mysqli_fetch_assoc($usuarios) ){
+?>            
                 <tr>
-                    <td>1</td>
-                    <td>nombre</td>
-                    <td>apellido</td>
-                    <td>email@mail.com</td>
+                    <td><?= $usuario['idUsuario'] ?></td>
+                    <td><?= $usuario['usuNombre'] ?></td>
+                    <td><?= $usuario['usuApellido'] ?></td>
+                    <td><?= $usuario['usuEmail'] ?></td>
                     <td>
                         <a href="" class="btn btn-outline-secondary btn-sm">
                             <i class="bi bi-pencil-square"> </i>
@@ -46,6 +52,9 @@
                         </a>
                     </td>
                 </tr>
+<?php
+        }
+?>            
             </tbody>
         </table>
 
