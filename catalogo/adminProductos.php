@@ -26,7 +26,7 @@
                     <th>Presentación</th>
                     <th>Imagen</th>
                     <th colspan="2">
-                        <a href="" class="btn btn-outline-secondary btn-sm">
+                        <a href="formAgregarProducto.php" class="btn btn-outline-secondary btn-sm">
                             <i class="bi bi-plus-square"> </i>
                             Agregar
                         </a>
