@@ -27,6 +27,11 @@
         return $resultado;
     }
 
+    function verProductoPorID()
+    {
+
+    }
+
     function subirImagen()
     {
         // si no envian archivo

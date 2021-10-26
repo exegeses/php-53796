@@ -45,7 +45,7 @@
                     <td><?= $producto['prdPresentacion'] ?></td>
                     <td><img src="productos/<?= $producto['prdImagen'] ?>" class="img-thumbnail"></td>
                     <td>
-                        <a href="" class="btn btn-outline-secondary btn-sm">
+                        <a href="formModificarProducto.php?idProducto=<?= $producto['idProducto'] ?>" class="btn btn-outline-secondary btn-sm">
                             <i class="bi bi-pencil-square"> </i>
                             Modificar
                         </a>
