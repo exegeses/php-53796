@@ -2,7 +2,7 @@
 
 # Curso de PHP y mySQL 53796
 
-> Curso de PHP y mySQL |    
+> Curso de PHP y mySQL | <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">   
 > Lunes, Martes y Miércoles 10hs a 13hs |    
 > Código 53796 |    
 > sensei: Marcos Pinardi |    
