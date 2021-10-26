@@ -1,6 +1,8 @@
 <img src="extras/imagenes/php.png">
 
-# Curso de PHP y mySQL 53796 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" style="position:relative; top:8px">
+# Curso de PHP y mySQL 53796 
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"> 
+<img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white">
 
 > Curso de PHP y mySQL |  
 > Lunes, Martes y Miércoles 10hs a 13hs |      
