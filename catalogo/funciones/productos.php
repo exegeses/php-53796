@@ -47,8 +47,13 @@
 
     function subirImagen()
     {
-        // si no envian archivo
+        // si no envian archivo en agregarProducto()
         $prdImagen = 'noDisponible.jpg';
+
+        // si no envian archivo en modificarProducto()
+        if ( isset( $_POST['imgActual'] ) ){
+            $prdImagen = $_POST['imgActual'];
+        }
 
         //enviaron archivo
         if( $_FILES['prdImagen']['error'] == 0 ){
@@ -94,4 +99,22 @@
         $resultado = mysqli_query( $link, $sql )
                         or die( mysqli_error($link) );
         return $resultado;
+    }
+
+    function modificarProducto()
+    {
+        /*capturamos datos enviados por el form*/
+        $prdNombre = $_POST['prdNombre'];
+        $prdPrecio = $_POST['prdPrecio'];
+        $idMarca   = $_POST ['idMarca'];
+        $idCategoria   = $_POST ['idCategoria'];
+        $prdPresentacion = $_POST['prdPresentacion'];
+        $prdStock = $_POST['prdStock'];
+        /* subir archivo */
+        $prdImagen  = subirImagen();
+        $idProducto = $_POST['idProducto'];
+
+        $link = conectar();
+        $sql  = "UPDATE ";
+
     }

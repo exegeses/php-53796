@@ -87,7 +87,9 @@
 
                 <input type="hidden" name="idProducto"
                        value="<?= $producto['idProducto'] ?>">
-                
+                <input type="hidden" name="imgActual"
+                       value="<?= $producto['prdImagen'] ?>">
+
                 <button class="btn btn-dark px-4">Modificar producto</button>
                 <a href="adminProductos.php" class="btn btn-outline-secondary">
                     Volver a panel de productos
