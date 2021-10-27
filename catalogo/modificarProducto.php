@@ -2,12 +2,12 @@
     //require 'config/config.php';
     require 'funciones/conexion.php';
     require 'funciones/productos.php';
-    $chequeo = agregarProducto();
+    $chequeo = modificarProducto();
     $css = 'danger';
-    $mensaje = 'No se pudo agregar el producto.';
+    $mensaje = 'No se pudo modificar el producto.';
     if( $chequeo ){
         $css = 'success';
-        $mensaje = 'Producto agregado correctamente.';
+        $mensaje = 'Producto mofidicado correctamente.';
     }
 
     include 'includes/header.html';
@@ -15,7 +15,7 @@
 ?>
 
     <main class="container">
-        <h1>Alta de un producto</h1>
+        <h1>Modificación de un producto</h1>
 
         <div class="alert alert-<?= $css ?> col-8 mx-auto">
             <?= $mensaje ?>
