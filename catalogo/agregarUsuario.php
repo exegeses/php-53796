@@ -1,13 +1,13 @@
 <?php
     //require 'config/config.php';
     require 'funciones/conexion.php';
-    require 'funciones/categorias.php';
-    $chequeo = agregarCategoria();
+    require 'funciones/usuarios.php';
+    $chequeo = agregarUsuario();
     $css = 'danger';
-    $mensaje = 'No se pudo agregar la categoría.';
+    $mensaje = 'No se pudo agregar el usuario.';
     if( $chequeo ){
         $css = 'success';
-        $mensaje = 'Categoría agregada correctamente.';
+        $mensaje = 'Usuario agregado correctamente.';
     }
 
     include 'includes/header.html';
@@ -15,12 +15,12 @@
 ?>
 
     <main class="container">
-        <h1>Alta de una categoría</h1>
+        <h1>Alta de un usuario</h1>
 
         <div class="alert alert-<?= $css ?> col-8 mx-auto">
             <?= $mensaje ?>
-            <a href="adminCategorias.php" class="btn btn-light m-2">
-                volver a panel de categorías
+            <a href="adminUsuarios.php" class="btn btn-light m-2">
+                volver a panel de usuarios
             </a>
         </div>
 
