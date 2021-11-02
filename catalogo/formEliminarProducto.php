@@ -1,5 +1,8 @@
 <?php  
 
+    require 'funciones/conexion.php';
+    require 'funciones/productos.php';
+    $producto = verProductoPorID();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -10,19 +13,19 @@
         <article class="card border-danger py-3 col-6 mx-auto">
             <div class="row">
                 <div class="col">
-                    <img src="productos/<?= 'prdImagen' ?>" class="img-thumbnail">
+                    <img src="productos/<?= $producto['prdImagen'] ?>" class="img-thumbnail">
                 </div>
                 <div class="col text-danger">
-                    <h2><?= 'prdNombre' ?></h2>
-                    <?= 'mkNombre' ?> | <?= 'catNombre' ?>
+                    <h2><?= $producto['prdNombre'] ?></h2>
+                    <?= $producto['mkNombre'] ?> | <?= $producto['catNombre'] ?>
                     <br>
-                    $<?= 'prdPrecio' ?>
+                    $<?= $producto['prdPrecio'] ?>
                     <br>
-                    <?= 'prdPresentacion' ?>
+                    <?= $producto['prdPresentacion'] ?>
 
                     <form action="eliminarProducto.php" method="post">
                         <input type="hidden" name="idProducto"
-                               value="<?= 'idProducto' ?>">
+                               value="<?= $producto['idProducto'] ?>">
                         <button class="btn btn-danger btn-block my-3">
                             Confirmar baja
                         </button>

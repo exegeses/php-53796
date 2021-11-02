@@ -129,3 +129,14 @@
                         or die( mysqli_error( $link ) );
         return $resultado;
     }
+
+    function eliminarProducto()
+    {
+        $idProducto = $_POST['idProducto'];
+        $link = conectar();
+        $sql  = "DELETE FROM productos
+                        WHERE idProducto = ".$idProducto;
+        $resultado = mysqli_query( $link, $sql )
+                            or die( mysqli_error( $link ) );
+        return $resultado;
+    }
