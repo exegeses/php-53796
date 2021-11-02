@@ -11,10 +11,13 @@
         <a class="py-2" href="adminProductos.php">Productos</a>
         <a class="py-2" href="adminUsuarios.php">Usuarios</a>
 
-    <!--
+<?php
+        if( isset( $_SESSION['login'] ) ){
+?>
         <div class="dropdown">
         <button class="btn btn-dark dropdown-toggle px-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Nombre Apellido
+                <?= $_SESSION['usuNombre'] ?>
+                <?= $_SESSION['usuApellido'] ?>
         </button>
             <div class="dropdown-menu bg-dark bg-opacity-75" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item bg-dark py-2" href="logout.php">
@@ -25,12 +28,18 @@
                 <a class="dropdown-item bg-dark py-2" href="">Cambiar contraseña</a>
             </div>
         </div>
-    -->
+<?php
+        }
+        else{
+?>
     <!---->
 
         <button class="btn btn-dark px-3">
             <a href="formLogin.php" class="border-bottom-0"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
         </button>
+<?php
+        }
+?>
 
     </div>
 </nav>

@@ -1,5 +1,5 @@
 <?php
-    //require 'config/config.php';
+    require 'config/config.php';
     require 'funciones/conexion.php';
     require 'funciones/categorias.php';
     $categorias = listarCategorias();

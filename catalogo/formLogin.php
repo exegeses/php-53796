@@ -1,5 +1,5 @@
 <?php
-    //require 'config/config.php';
+    require 'config/config.php';
     include 'includes/header.html';
     include 'includes/nav.php';
 ?>
@@ -23,6 +23,16 @@
                 </button>
             </form>
         </div>
+
+<?php
+        if( isset($_GET['error']) ) {
+?>
+        <div class="alert alert-danger col-8 mx-auto p-3">
+            Nombre de usuario y/o contraseña incorrectos.
+        </div>
+<?php
+        }
+?>
 
     </main>
 
