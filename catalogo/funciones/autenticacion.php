@@ -34,7 +34,7 @@
             $_SESSION['usuNombre'] = $usuario['usuNombre'];
             $_SESSION['usuApellido'] = $usuario['usuApellido'];
             $_SESSION['idUsuario'] = $usuario['idUsuario'];
-            
+
             //redirección a admin
             header( 'location: admin.php' );
         }
