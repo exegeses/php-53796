@@ -1,12 +1,14 @@
 <?php
-    //require 'config/config.php';
+
+    require 'config/config.php';
+    require 'funciones/autenticacion.php';
+        autenticar();
     include 'includes/header.html';
     include 'includes/nav.php';
 ?>
 
     <main class="container">
         <h1>Cambio de contraseña</h1>
-
 
         <div class='alert bg-light p-4 col-8 mx-auto shadow'>
             <form action="modificarClave.php" method="post" class="validarForm">
@@ -36,7 +38,7 @@
                     </div>
                 </div>
 
-                <button class='btn btn-dark my-3 px-4'>Agregar usuario</button>
+                <button class='btn btn-dark my-3 px-4'>Modificar contraseña</button>
                 <a href="adminUsuarios.php" class='btn btn-outline-secondary'>
                     Volver a panel de usuarios
                 </a>

@@ -25,7 +25,7 @@
                     Salir de sistema
                 </a>
                 <a class="dropdown-item bg-dark py-2" href="">Modificar Perfil</a>
-                <a class="dropdown-item bg-dark py-2" href="">Cambiar contraseña</a>
+                <a class="dropdown-item bg-dark py-2" href="formModificarClave.php">Cambiar contraseña</a>
             </div>
         </div>
 <?php
