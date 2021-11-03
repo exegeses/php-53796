@@ -49,7 +49,12 @@
 
     /**
      * función para chequear
-     * si el usuario está logueado
+     * si el usuario no está logueado
+     * y entonces no dejarlo ver contenido
      */
     function autenticar()
-    {}
+    {
+        if ( !isset( $_SESSION['login'] ) ){
+            header('location: formLogin.php?error=1');
+        }
+    }
