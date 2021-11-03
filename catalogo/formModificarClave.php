@@ -46,6 +46,16 @@
 
         </div>
 
+<?php
+        if( isset( $_GET['error'] ) ){
+?>
+            <div class="alert alert-danger col-8 mx-auto">
+                Las credenciales no coinciden.
+            </div>
+<?php
+        }
+?>
+
         <script>
             let form = document.querySelector('.validarForm');
             let usuPass = document.querySelector('#usuPass');
