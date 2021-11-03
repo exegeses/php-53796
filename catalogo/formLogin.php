@@ -25,13 +25,18 @@
         </div>
 
 <?php
-        if( isset($_GET['error']) ) {
+        if( isset($_GET['error']) ) { // se está error en URL
+            $error = $_GET['error']; // lo capturamos
+            $mensaje = 'Debe estar logueado para la acción solicitada.';
+            if( $error == 1 ) {
+                $mensaje = 'Nombre de usuario y/o contraseña incorrectos.';
+            }
 ?>
         <div class="alert alert-danger col-8 mx-auto p-3">
-            Nombre de usuario y/o contraseña incorrectos.
+            <?= $mensaje ?>
         </div>
 <?php
-        }
+       }
 ?>
 
     </main>
