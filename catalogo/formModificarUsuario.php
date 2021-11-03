@@ -1,4 +1,5 @@
 <?php
+
     require 'config/config.php';
     require 'funciones/autenticacion.php';
         autenticar();
