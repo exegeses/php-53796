@@ -13,6 +13,19 @@
         return $resultado;
     }
 
+    function verUsuarioPorID()
+    {
+        $idUsuario = $_GET['idUsuario'];
+        $link = conectar();
+        $sql  = "SELECT idUsuario, usuNombre, usuApellido, usuEmail 
+                        FROM usuarios
+                        WHERE idUsuario = ".$idUsuario;
+        $resultado = mysqli_query( $link, $sql )
+                        or die( mysqli_error( $link ) );
+        $usuario = mysqli_fetch_assoc( $resultado );
+        return $usuario;
+    }
+
     function agregarUsuario()
     {
         $usuNombre   = $_POST['usuNombre'];
@@ -30,6 +43,24 @@
                                   '".$usuEmail."',
                                   '".$pHash."'
                                  )";
+        $resultado = mysqli_query( $link, $sql )
+                        or die( mysqli_error( $link ) );
+        return $resultado;
+    }
+
+    function modificarUsuario()
+    {
+        $usuNombre = $_POST['usuNombre'];
+        $usuApellido = $_POST['usuApellido'];
+        $usuEmail = $_POST['usuEmail'];
+        $idUsuario = $_POST['idUsuario'];
+
+        $link = conectar();
+        $sql  = "UPDATE usuarios 
+                    SET usuNombre = '".$usuNombre."',
+                        usuApellido = '".$usuApellido."',
+                        usuEmail = '".$usuEmail."'
+                    WHERE idUsuario = ".$idUsuario;
         $resultado = mysqli_query( $link, $sql )
                         or die( mysqli_error( $link ) );
         return $resultado;

@@ -1,5 +1,10 @@
 <?php
-    //require 'config/config.php';
+    require 'config/config.php';
+    require 'funciones/autenticacion.php';
+        autenticar();
+    require 'funciones/conexion.php';
+    require 'funciones/usuarios.php';
+    $usuario = verUsuarioPorID();
     include 'includes/header.html';
     include 'includes/nav.php';
 ?>
@@ -14,11 +19,13 @@
                 <div class='form-group mb-2'>
                     <label for="usuNombre">Nombre</label>
                     <input type="text" name="usuNombre"
+                           value="<?= $usuario['usuNombre'] ?>"
                            class='form-control' id="usuNombre" required>
                 </div>
                 <div class='form-group mb-2'>
                     <label for="usuApellido">Apellido</label>
                     <input type="text" name="usuApellido"
+                           value="<?= $usuario['usuApellido'] ?>"
                            class='form-control' id="usuApellido" required>
                 </div>
                 <div class='form-group'>
@@ -28,9 +35,13 @@
                             <div class="input-group-text">@</div>
                         </div>
                         <input type="email" name="usuEmail"
+                               value="<?= $usuario['usuEmail'] ?>"
                                class="form-control" id="usuEmail" required>
                     </div>
                 </div>
+
+                <input type="hidden" name="idUsuario"
+                       value="<?= $usuario['idUsuario'] ?>">
 
                 <button class='btn btn-dark my-3 px-4'>Modificación usuario</button>
                 <a href="adminUsuarios.php" class='btn btn-outline-secondary'>
