@@ -48,7 +48,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="" class="btn btn-outline-secondary btn-sm">
+                        <a href="formEliminarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary btn-sm">
                             <i class="bi bi-dash-square"> </i>
                             Eliminar
                         </a>
